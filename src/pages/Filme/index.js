@@ -36,6 +36,23 @@ function Filme() {
     };
   }, [navigation, id]);
 
+  function salvarFilme() {
+    const minhaLista = localStorage.getItem("filmFlix");
+
+    let filmesSalvos = JSON.parse(minhaLista) || [];
+
+    const hasFilme = filmesSalvos.some(
+      (filmesSalvo) => filmesSalvo.id === filme.id
+    );
+    if (hasFilme) {
+      alert("Esse filme já está na lista");
+      return;
+    }
+    filmesSalvos.push(filme);
+    localStorage.setItem("filmFlix", JSON.stringify(filmesSalvos));
+    alert("Filme salvo com sucesso! ");
+  }
+
   if (loading) {
     <div className="filme-info">
       <h1>Carregando detalhes...</h1>
@@ -53,7 +70,7 @@ function Filme() {
       <span>{filme.overview}</span>
       <strong>Avaliação: {filme.vote_average} /10</strong>
       <div className="area-buttons">
-        <button>Salvar</button>
+        <button onClick={salvarFilme}>Salvar</button>
         <button>
           <a
             target="blank"
