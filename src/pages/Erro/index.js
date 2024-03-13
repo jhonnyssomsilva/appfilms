@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./erro.css";
+
 function Erro() {
   return (
     <div className="not-found">
