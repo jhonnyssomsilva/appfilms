@@ -9,7 +9,7 @@ function Home() {
 
   useEffect(() => {
     async function loadFilms() {
-      const response = await api.get("movie/now_playing", {
+      const response = await api.get("movie/upcoming", {
         params: {
           api_key: "faef24c2d618284f0095f037bf879f6c",
           language: "pt-BR",
@@ -17,7 +17,7 @@ function Home() {
         },
       });
       // console.log(response.data.results.slice(0, 10));
-      setFilmes(response.data.results.slice(0, 10));
+      setFilmes(response.data.results.slice(0, 20));
       setLoading(false);
     }
     loadFilms();
@@ -33,6 +33,9 @@ function Home() {
 
   return (
     <div className="container">
+      <div>
+        <h1 className="title-filmes">Filmes Lançamentos</h1>
+      </div>
       <div className="lista-filmes">
         {filmes.map((filme) => {
           return (

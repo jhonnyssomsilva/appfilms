@@ -1,3 +1,9 @@
+.title-filmes {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 22px;
+}
 .lista-filmes {
   max-width: 800px;
   margin: 14px auto;
