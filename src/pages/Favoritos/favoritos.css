@@ -31,3 +31,26 @@
   color: #116feb;
   margin-right: 14px;
 }
+
+/* Estilos para dispositivos com largura de tela de até 768px (tamanhos de tablet e dispositivos móveis) */
+/* Estilos para dispositivos com largura de tela de até 768px (tamanhos de tablet e dispositivos móveis) */
+@media only screen and (max-width: 768px) {
+  .meus-filmes ul {
+    width: 100%; /* Altera a largura da lista para ocupar toda a largura disponível */
+  }
+
+  .meus-filmes ul li {
+    flex-direction: row; /* Retorna a direção do flex para linha */
+    justify-content: space-between; /* Mantém o espaçamento entre os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-bottom: 5px; /* Reduz ainda mais a margem inferior dos itens */
+    padding: 0 10px; /* Adiciona um pequeno preenchimento para evitar que os itens sejam cortados */
+    box-sizing: border-box; /* Garante que o preenchimento seja contabilizado no tamanho total do elemento */
+  }
+  .meus-filmes div {
+    flex-direction: column; /* Altera a direção do flex para coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    margin-top: 20px; /* Ajusta a margem superior para centralizar o grupo verticalmente */
+  }
+}
