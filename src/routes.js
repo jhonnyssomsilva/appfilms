@@ -12,7 +12,7 @@ function RoutesApp() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/filmes/:id" element={<Filme />} />
+        <Route path="/filme/:id" element={<Filme />} />
 
         <Route path="*" element={<Erro />} />
       </Routes>
